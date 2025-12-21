@@ -7,7 +7,7 @@ def n_queens(n):
     def place(row):
         if row==n:
             sol.append(board.copy())
-            print(sol)
+            
             return
         for col in range(n):
             if col in cols or (row+col) in drag1 or (row-col) in drag2:
@@ -24,5 +24,5 @@ def n_queens(n):
 
 sol=n_queens(4)
 for i,j in enumerate(sol,1):
-    print("The total solutions are {i}")
-    print('\n'.join(sol))
+    print(f"The total solutions are {i}:")
+    print('\n'.join(j))
