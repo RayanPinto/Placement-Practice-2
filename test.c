@@ -1,8 +1,15 @@
 #include<stdio.h>
 #include<stdlib.h>
 int compare(const void *a,const void *b){
-    return *(const int *)a>*(const int *)b? 1 : *(const int *)a<*(const int *)b? -1:0;
-
+    int x=*(int *)a;
+    int y=*(int *)b;
+    if(x<y){
+        return 1;
+    }
+    if(x>y){
+        return -1;
+    }
+    return 0;
 }
 int main(){
     int arr[]={1,5,41,4,6,4,2};
